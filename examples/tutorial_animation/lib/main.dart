@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'src/basics/animated_container.dart';
+import 'src/basics/page_route_builder.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -29,6 +30,10 @@ final basicDemos = [
     name: 'AnimatedContainer',
     route: AnimatedContainerDemo.routeName,
     builder: (context) => AnimatedContainerDemo()),
+  Demo(
+      name: 'PageRouteBuilder',
+      route: PageRouteBuilderDemo.routeName,
+      builder: (context) => PageRouteBuilderDemo()),
 ];
 
 class Demo {

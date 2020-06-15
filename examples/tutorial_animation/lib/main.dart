@@ -5,6 +5,7 @@ import 'src/basics/page_route_builder.dart';
 import 'src/basics/tweens.dart';
 import 'src/basics/animated_builder.dart';
 import 'src/basics/custom_tween.dart';
+import 'src/basics/tween_sequence.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -43,7 +44,7 @@ final basicDemos = [
     route: AnimationControllerDemo.routeName,
     builder: (context) => AnimationControllerDemo()),
   Demo(
-      name: 'Tweeens',
+      name: 'Tweens',
       route: TweenDemo.routeName,
       builder: (context) => TweenDemo()),
   Demo(
@@ -54,6 +55,10 @@ final basicDemos = [
       name: 'CustomTween',
       route: CustomTweenDemo.routeName,
       builder: (context) => CustomTweenDemo()),
+  Demo(
+      name: 'TweenSequence',
+      route: TweenSequenceDemo.routeName,
+      builder: (context) => TweenSequenceDemo()),
 ];
 
 class Demo {

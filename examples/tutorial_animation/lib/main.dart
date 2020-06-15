@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tutorialanimation/src/basics/animation_controller.dart';
 import 'src/basics/animated_container.dart';
 import 'src/basics/page_route_builder.dart';
+import 'src/basics/tweens.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -39,6 +40,10 @@ final basicDemos = [
     name: 'AnimationController',
     route: AnimationControllerDemo.routeName,
     builder: (context) => AnimationControllerDemo()),
+  Demo(
+      name: 'Tweeens',
+      route: TweenDemo.routeName,
+      builder: (context) => TweenDemo()),
 ];
 
 class Demo {

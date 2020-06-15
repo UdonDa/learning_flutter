@@ -3,6 +3,8 @@ import 'package:tutorialanimation/src/basics/animation_controller.dart';
 import 'src/basics/animated_container.dart';
 import 'src/basics/page_route_builder.dart';
 import 'src/basics/tweens.dart';
+import 'src/basics/animated_builder.dart';
+import 'src/basics/custom_tween.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -44,6 +46,14 @@ final basicDemos = [
       name: 'Tweeens',
       route: TweenDemo.routeName,
       builder: (context) => TweenDemo()),
+  Demo(
+      name: 'AnimatedBuilder',
+      route: AnimatedBuilderDemo.routeName,
+      builder: (context) => AnimatedBuilderDemo()),
+  Demo(
+      name: 'CustomTween',
+      route: CustomTweenDemo.routeName,
+      builder: (context) => CustomTweenDemo()),
 ];
 
 class Demo {

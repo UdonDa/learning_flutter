@@ -6,6 +6,10 @@ import 'src/basics/tweens.dart';
 import 'src/basics/animated_builder.dart';
 import 'src/basics/custom_tween.dart';
 import 'src/basics/tween_sequence.dart';
+import 'src/basics/fade_transition.dart';
+import 'src/misc/animated_list.dart';
+import 'src/misc/animated_positioned.dart';
+import 'src/misc/animated_switcher.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -25,10 +29,12 @@ class AnimationSamples extends StatelessWidget{
 
 final allRoutes = <String, WidgetBuilder> {
   ...basicDemoRoutes,
+  ...miscDemoRoutes,
 };
 
 
 final basicDemoRoutes = Map.fromEntries(basicDemos.map((d) => MapEntry(d.route, d.builder)));
+final miscDemoRoutes = Map.fromEntries(miscDemos.map((d) => MapEntry(d.route, d.builder)));
 
 final basicDemos = [
   Demo(
@@ -59,6 +65,25 @@ final basicDemos = [
       name: 'TweenSequence',
       route: TweenSequenceDemo.routeName,
       builder: (context) => TweenSequenceDemo()),
+  Demo(
+      name: 'FadeTransition',
+      route: FadeTransitionDemo.routeName,
+      builder: (context) => FadeTransitionDemo()),
+];
+
+final miscDemos = [
+  Demo(
+    name: 'AnimatedList',
+    route: AnimatedListDemo.routeName,
+    builder: (context) => AnimatedListDemo()),
+  Demo(
+      name: 'AnimatedPositioned',
+      route: AnimatedPositionDemo.routeName,
+      builder: (context) => AnimatedPositionDemo()),
+  Demo(
+      name: 'AnimatedSwitcher',
+      route: AnimatedSwitcherDemo.routeName,
+      builder: (context) => AnimatedSwitcherDemo()),
 ];
 
 class Demo {
@@ -79,7 +104,9 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(title: Text('Basics', style: headerStyle)),
-            ...basicDemos.map((d) => DemoTile(d))
+            ...basicDemos.map((d) => DemoTile(d)),
+          ListTile(title: Text('Misc', style: headerStyle)),
+          ...miscDemos.map((d) => DemoTile(d))
         ],
       ),
     );

@@ -10,6 +10,7 @@ import 'src/basics/fade_transition.dart';
 import 'src/misc/animated_list.dart';
 import 'src/misc/animated_positioned.dart';
 import 'src/misc/animated_switcher.dart';
+import 'src/misc/card_swipe.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -84,6 +85,11 @@ final miscDemos = [
       name: 'AnimatedSwitcher',
       route: AnimatedSwitcherDemo.routeName,
       builder: (context) => AnimatedSwitcherDemo()),
+  Demo(
+      name: 'CardSwipe',
+      route: CardSwipeDemo.routeName,
+      builder: (context) => CardSwipeDemo()),
+
 ];
 
 class Demo {

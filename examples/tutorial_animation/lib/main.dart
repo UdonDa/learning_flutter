@@ -11,6 +11,7 @@ import 'src/misc/animated_list.dart';
 import 'src/misc/animated_positioned.dart';
 import 'src/misc/animated_switcher.dart';
 import 'src/misc/card_swipe.dart';
+import 'src/misc/carousel.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -89,7 +90,10 @@ final miscDemos = [
       name: 'CardSwipe',
       route: CardSwipeDemo.routeName,
       builder: (context) => CardSwipeDemo()),
-
+  Demo(
+      name: 'Carousel',
+      route: CarouselDemo.routeName,
+      builder: (context) => CarouselDemo()),
 ];
 
 class Demo {

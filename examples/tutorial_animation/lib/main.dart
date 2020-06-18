@@ -15,6 +15,7 @@ import 'src/misc/carousel.dart';
 import 'src/misc/curved_animation.dart';
 import 'src/misc/expand_card.dart';
 import 'src/misc/focus_image.dart';
+import 'src/misc/hero_animation.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -109,6 +110,10 @@ final miscDemos = [
       name: 'FocusImage',
       route: FocusImageDemo.routeName,
       builder: (context) => FocusImageDemo()),
+  Demo(
+      name: 'HeroAnimation',
+      route: HeroAnimationDemo.routeName,
+      builder: (context) => HeroAnimationDemo()),
 ];
 
 class Demo {

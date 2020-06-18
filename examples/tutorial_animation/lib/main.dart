@@ -16,6 +16,8 @@ import 'src/misc/curved_animation.dart';
 import 'src/misc/expand_card.dart';
 import 'src/misc/focus_image.dart';
 import 'src/misc/hero_animation.dart';
+import 'src/misc/physics_card_drag.dart';
+import 'src/misc/repeating_animation.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -114,6 +116,14 @@ final miscDemos = [
       name: 'HeroAnimation',
       route: HeroAnimationDemo.routeName,
       builder: (context) => HeroAnimationDemo()),
+  Demo(
+      name: 'PhysicsCardDrag',
+      route: PhysicsCardDragDemo.routeName,
+      builder: (context) => PhysicsCardDragDemo()),
+  Demo(
+      name: 'RepeatingAnimation',
+      route: RepeatingAnimationDemo.routeName,
+      builder: (context) => RepeatingAnimationDemo()),
 ];
 
 class Demo {
